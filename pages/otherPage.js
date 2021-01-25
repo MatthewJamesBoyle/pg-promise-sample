@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import getDB from "../db";
+import {getDB} from "../db";
 
 
 export async function getServerSideProps(ctx) {
-    let someRes = await getDB().any("SELECT * FROM users");
+    let someRes = await getDB().db.any("SELECT * FROM users");
 
     return {
         props: {

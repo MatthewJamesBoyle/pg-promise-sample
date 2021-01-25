@@ -22,9 +22,8 @@ function getSingleton(name, defaults) {
 
 function getDB() {
     // get singleton, set db and pgp in it, if for the first time:
-    return getSingleton('my-app-singleton-space', {db, pgp}).db;
+    return getSingleton('my-app-singleton-space', {db, pgp});
 }
 
 
-// module.exports = {getDB, db}
-export default getDB
+module.exports = {getDB}
